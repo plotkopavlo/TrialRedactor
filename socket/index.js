@@ -169,6 +169,7 @@ module.exports = function (server) {
 	require('./chat')(io);
 	require('./pad')(io);
 	require('./document')(io);
+	require('./blogList')(io);
 
 	//doc
 

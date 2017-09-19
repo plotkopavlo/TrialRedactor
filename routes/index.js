@@ -21,11 +21,11 @@ module.exports = function(app) {
 
 
 	app.get('/bloglist', require('./blogList').get);
-
+/*
 	app.get('/blogarticle', require('./blogArticle').get);
 
 	app.get('/restApi', require('./restApi').get);
 
-
+*/
 
 };
