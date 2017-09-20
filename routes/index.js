@@ -19,13 +19,7 @@ module.exports = function(app) {
 
 	app.get('/pad', checkAuth, require('./pad').get);
 
+	require('./blog')(app);
 
-	app.get('/bloglist', require('./blogList').get);
-/*
-	app.get('/blogarticle', require('./blogArticle').get);
-
-	app.get('/restApi', require('./restApi').get);
-
-*/
 
 };
