@@ -20,6 +20,7 @@ exports.get = function(req, res, next) {
 			UserCreate: file.UserCreate
 		});
 	}).catch(function (err) {
+		console.error(err);
 		next( new  HttpError(404, "Document not found"));
 	});
 };

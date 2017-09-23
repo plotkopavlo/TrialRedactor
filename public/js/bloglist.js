@@ -17,7 +17,7 @@ function getArticles() {
 
 		var rewData = evt.target.response;
 		var loadArticle = JSON.parse(rewData);
-		console.log(evt);
+
 		reWriteDocuments(loadArticle);
 	};
 	xhr.send();
@@ -49,8 +49,8 @@ function reWriteDocuments(articles) {
 function getElementFromTemplate (data) {
 	var template = document.querySelector('#article');
 	var element = template.content.children[0].cloneNode(true);
-	element.querySelector('.article--title').textContent  = data.title;
-	element.querySelector('.article--title').href  = 'blog/post/' + data.id;
+	element.querySelector('.article--title').childNodes[1].textContent  = data.title;
+	element.querySelector('.article--title').childNodes[1].href  ='blog/post/' + data.id;
 
 	element.querySelector('.article--user-create').textContent  = data.userCreate;
 	element.querySelector('.article--text-aticle').textContent  = data.text;

@@ -26,7 +26,6 @@ exports.getData = function(req, res) {
 			return JSON.stringify(sendFiles);
 		})
 		.then(function (sendFiles) {
-			console.log(res);
 			res.send(sendFiles);
 		})
 		.catch(function (err) {
